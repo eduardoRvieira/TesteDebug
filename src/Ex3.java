@@ -42,11 +42,11 @@ public class Ex3 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Digite um dia da semana para calcular a media diaria");
-        String diaEscolhido = input.next();
+        String diaEscolhido = input.nextLine(); // melhora
         int indiceDia = 0;
 
         for (int i = 0; i < diasSemana.length; i++) {
-            if (diasSemana[i] == (diaEscolhido)) {
+            if (diasSemana[i].equalsIgnoreCase(diaEscolhido)) { // correção de erro
                 indiceDia = i;
                 break;
             }
@@ -64,10 +64,33 @@ public class Ex3 {
 
         soma = 0;
         for (int i = 0; i < 7; i++) {
-            soma += temperaturas[hora][i];
+            soma += temperaturas[i][hora]; // correção de erro
         }
         double mediaHora = soma / 7;
         System.out.println("Media da temperatura as " + hora + " horas: " + mediaHora);
 
+        // adiciona item C
+        double maiorAmplitude = -1;
+        String diaMaiorAmplitude = "";
+
+        for (int dia = 0; dia < temperaturas.length; dia++) {
+            double min = temperaturas[dia][0];
+            double max = temperaturas[dia][0];
+
+            for (int h = 1; h < temperaturas[dia].length; h++) {
+                if (temperaturas[dia][h] < min) min = temperaturas[dia][h];
+                if (temperaturas[dia][h] > max) max = temperaturas[dia][h];
+            }
+
+            double amplitude = max - min;
+            if (amplitude > maiorAmplitude) {
+                maiorAmplitude = amplitude;
+                diaMaiorAmplitude = diasSemana[dia];
+            }
+        }
+
+        System.out.printf("O dia com maior amplitude térmica foi %s (Amplitude: %.2f °C)\n", diaMaiorAmplitude, maiorAmplitude);
+
+        input.close();
     }
 }

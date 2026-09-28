@@ -19,33 +19,31 @@ public class Ex2 {
         int[] numeros = new int[5];
 
         System.out.println("Digite 5 números:");
-        for (int i = 0; i <= numeros.length; i++) {
-            System.out.print("Número " + (i) + ": ");
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print("Número " + (i + 1) + ": "); // arruma visualização
             numeros[i] = input.nextInt();
         }
 
-        int maior = 0;
-        int menor = 0;
+        int maior = numeros[0];
+        int menor = numeros[0];
         int soma = 0;
-
-        maior = numeros[0];
-        menor = numeros[0];
 
         for (int num : numeros) {
             if (num > maior) {
                 maior = num;
             }
             if (num < menor) {
-                maior = num;
+                menor = num; // correção de erro
             }
             soma += num;
         }
 
-        double media = soma / numeros.length;
+        double media = (double) soma / numeros.length; // correção de erro
 
         System.out.println("Maior número: " + maior);
         System.out.println("Menor número: " + menor);
         System.out.println("Media dos números: " + media);
 
+        input.close();
     }
 }

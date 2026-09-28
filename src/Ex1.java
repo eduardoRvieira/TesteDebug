@@ -19,17 +19,18 @@ public class Ex1 {
 
         double altura;
         while (true) {
-            contador++;
+
             System.out.println("Insira a altura");
             altura = input.nextDouble();
             if (altura > 0) {
-                somaAltura++;
+                somaAltura += altura; // correção de erro
+                contador++; // correção de erro
             } else {
                 break;
             }
         }
 
-        double media = altura / contador;
+        double media = somaAltura / contador; //correção de erro
 
         System.out.println("Média de altura: " + media + " metros");
     }
