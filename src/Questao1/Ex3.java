@@ -1,3 +1,5 @@
+package Questao1;
+
 import java.util.Scanner;
 
 /**
