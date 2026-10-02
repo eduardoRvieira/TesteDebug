@@ -2,16 +2,16 @@
 Associe cada situação a um nível da pirâmide de teste:
 
 a) Verificar se a função `calcularFrete()` retorna o valor correto.
-R: 1° Nível
+R: 1° Nível - Teste Unitário
 
 b) Verificar se o módulo de pagamento consegue conversar corretamente com o sistema do banco.
-R: 2º Nível
+R: 2º Nível - Teste de Integração
 
 c) Realizar uma compra completa, desde o login até a confirmação do pedido.
-R: 3° Nível
+R: 3° Nível - Teste de Sistema
 
 d) O cliente valida se o sistema atende às necessidades definidas no projeto.
-R: 4º Nível
+R: 4º Nível - Teste de Aceitação do Usuário
 
 e) Verificar se o cadastro de usuário consegue enviar corretamente os dados para o serviço responsável por armazená-los.
-R: 2º Nível
+R: 2º Nível - Teste de Integração
