@@ -1,0 +1,17 @@
+Para cada atividade, determine se ela é principalmente Verificação (V) ou Validação (VA).
+1.	Revisar uma especificação de requisitos de software.
+R: V
+2.	Executar um teste de login com credenciais válidas.
+R: VA
+3.	Inspecionar o código-fonte para verificar violações dos padrões de programação.
+R: V
+4.	Verificar se o esquema do banco de dados corresponde à especificação de projeto.
+R: V
+5.	Solicitar aos usuários que testem se a aplicação atende às suas necessidades.
+R: VA
+6.	Realizar uma revisão de código antes dos testes de integração.
+R: V
+7.	Testar se um carrinho de compras calcula corretamente o valor total.
+R: VA
+8.	Revisar um plano de testes antes do início dos testes.
+R: V
